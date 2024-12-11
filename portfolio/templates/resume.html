@@ -1,0 +1,77 @@
+{% include "navbar.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<style>
+    .name, h4 {
+        position: relative;
+        margin-right: 90px;
+}
+    .hr1 {
+        position: relative;
+        top: 10px;
+        width: 100%;
+    }
+    .data1 {
+        margin-top: -160px;
+        margin-left: 500px;
+    }
+    .ms-4 {
+        margin-left: 5.5rem;
+    }
+    .hr2 {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .Ed {
+        margin-left: 500px;
+    }
+    .sch {
+        margin-left: 500px;
+    }
+    
+    
+</style>
+<body>
+    <div class="d-flex justify-content-center mt-5">
+    <div class="card text-dark bg-light mb-3 px-5 py-5" style="max-width: 75rem;">
+        <div class="d-flex justify-content-between">
+            <img src="{% static 'images/pic1.png' %}" style="width: 300px; height: 300px;" class="img-fluid rounded-circle ms-3 border border-black border-5" alt="ID">
+            <div>
+                <h1 class="name mt-2 fw-bold">German R. Cinco Jr.</h1>
+                <h4>BSIT Student</h4>
+                <hr class="hr1" style="height: 3px;"></hr>
+            </div>
+        </div>
+            <div class="d-flex justify-content-center">
+                <div class="data1 d-flex flex-column align-items-start me-5">
+                    <h3 class="fw-bold">Personal Data</h3><br>
+                    <p><b>Age:</b><span style="margin-left: 155px;">16</span></p>
+                    <p><b>Sex:</b><span style="margin-left: 158px;">Male</span></p>
+                    <p><b>Birthday:</b><span style="margin-left: 120px;">December 17, 2000</span></p>
+                    <p><b>Birthplace:</b><span style="margin-left: 108px;">Bgy. Bahile Puerto Princesa City</span></p>
+                    <p><b>Father's Name:</b><span style="margin-left: 77px;">German V. Cinco Sr.</span></p>
+                    <p><b>Mother's Name:</b><span style="margin-left: 70px;">Maria Isabel R. Cinco</span></p>
+                    <p><b>Civil Status:</b><span style="margin-left: 103px;">Single</span></p>
+                    <p><b>Nationality:</b><span style="margin-left: 103px;">Filipino</span></p>
+                    <p><b>Religion:</b><span style="margin-left: 120px;">Roman Catholic</span></p>
+
+                </div>
+            </div>
+            <hr class="hr2" style="height: 3px"></hr><br>
+            <h3 class="Ed fw-bold">Educational Background</h3><br>
+            <div class="sch">
+            <p><b>Palawan State University</b><br>Tiniguiban Heights, Puerto Princesa City<br>2018-2024(present)</p><br>
+            <p><b>Bahile National High School</b><br>Bgy. Bahile, Puerto Princesa City<br>2012-2018</p><br>
+            <p><b>Bahile Elementary School</b><br>Bgy. Bahile, Puerto Princesa City<br>2006-2012</p>
+            </div>
+</html>
