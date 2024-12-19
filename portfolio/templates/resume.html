@@ -1,77 +1,119 @@
-{% include "navbar.html" %}
 {% load static %}
+{% include "navbar.html" %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .resume-card {
+            background-color: #ffffff;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 900px;
+        }
+        .resume-card img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #0d6efd;
+        }
+        .resume-card h1, .resume-card h3 {
+            color: #0d6efd;
+        }
+        .personal-data, .education {
+            margin-top: 30px;
+        }
+        .personal-data p, .education p {
+            margin-bottom: 10px;
+        }
+        .education {
+            margin-top: 40px;
+        }
+        .social-icons a {
+            color: #0d6efd;
+            font-size: 1.5rem;
+            margin: 0 12px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #6610f2;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        /* Adjustments for smaller screen sizes */
+        @media (max-width: 768px) {
+            .resume-card {
+                padding: 20px;
+            }
+            .resume-card img {
+                width: 200px;
+                height: 200px;
+            }
+            .personal-data, .education {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
-<style>
-    .name, h4 {
-        position: relative;
-        margin-right: 90px;
-}
-    .hr1 {
-        position: relative;
-        top: 10px;
-        width: 100%;
-    }
-    .data1 {
-        margin-top: -160px;
-        margin-left: 500px;
-    }
-    .ms-4 {
-        margin-left: 5.5rem;
-    }
-    .hr2 {
-        width: 100%;
-        margin: 0 auto;
-    }
-    .Ed {
-        margin-left: 500px;
-    }
-    .sch {
-        margin-left: 500px;
-    }
-    
-    
-</style>
 <body>
-    <div class="d-flex justify-content-center mt-5">
-    <div class="card text-dark bg-light mb-3 px-5 py-5" style="max-width: 75rem;">
-        <div class="d-flex justify-content-between">
-            <img src="{% static 'images/pic1.png' %}" style="width: 300px; height: 300px;" class="img-fluid rounded-circle ms-3 border border-black border-5" alt="ID">
-            <div>
-                <h1 class="name mt-2 fw-bold">German R. Cinco Jr.</h1>
-                <h4>BSIT Student</h4>
-                <hr class="hr1" style="height: 3px;"></hr>
-            </div>
-        </div>
+    <div class="container text-center">
+        <div class="resume-card">
+            
             <div class="d-flex justify-content-center">
-                <div class="data1 d-flex flex-column align-items-start me-5">
-                    <h3 class="fw-bold">Personal Data</h3><br>
-                    <p><b>Age:</b><span style="margin-left: 155px;">16</span></p>
-                    <p><b>Sex:</b><span style="margin-left: 158px;">Male</span></p>
-                    <p><b>Birthday:</b><span style="margin-left: 120px;">December 17, 2000</span></p>
-                    <p><b>Birthplace:</b><span style="margin-left: 108px;">Bgy. Bahile Puerto Princesa City</span></p>
-                    <p><b>Father's Name:</b><span style="margin-left: 77px;">German V. Cinco Sr.</span></p>
-                    <p><b>Mother's Name:</b><span style="margin-left: 70px;">Maria Isabel R. Cinco</span></p>
-                    <p><b>Civil Status:</b><span style="margin-left: 103px;">Single</span></p>
-                    <p><b>Nationality:</b><span style="margin-left: 103px;">Filipino</span></p>
-                    <p><b>Religion:</b><span style="margin-left: 120px;">Roman Catholic</span></p>
-
+                
+                <img src="{% static 'images/martid.jpg' %}" alt="Reymart F. Azucena" class="img-fluid rounded-circle border border-primary">
+                <div class="ms-4 mt-4">
+                    <h1>Reymart F. Azucena</h1>
+                    <h4 class="text-muted">BSIT - 4th Year Student</h4>
                 </div>
             </div>
-            <hr class="hr2" style="height: 3px"></hr><br>
-            <h3 class="Ed fw-bold">Educational Background</h3><br>
-            <div class="sch">
-            <p><b>Palawan State University</b><br>Tiniguiban Heights, Puerto Princesa City<br>2018-2024(present)</p><br>
-            <p><b>Bahile National High School</b><br>Bgy. Bahile, Puerto Princesa City<br>2012-2018</p><br>
-            <p><b>Bahile Elementary School</b><br>Bgy. Bahile, Puerto Princesa City<br>2006-2012</p>
+
+          
+            <div class="personal-data">
+                <h3 class="fw-bold">Personal Data</h3>
+                <hr>
+                <p><strong>Age:</strong> 25</p>
+                <p><strong>Sex:</strong> Male</p>
+                <p><strong>Birthday:</strong> July 03, 1999</p>
+                <p><strong>Birthplace:</strong> Brgy. 3, Roxas, Palawan</p>
+                <p><strong>Father's Name:</strong> Nelson F. Azucena</p>
+                <p><strong>Mother's Name:</strong> Florentina F. Azucena</p>
+                <p><strong>Civil Status:</strong> Single</p>
+                <p><strong>Nationality:</strong> Filipino</p>
+                <p><strong>Religion:</strong> Roman Catholic</p>
             </div>
+
+            <div class="education">
+                <h3 class="fw-bold">Educational Background</h3>
+                <hr>
+                <p><strong>Palawan State University</strong><br>2018 - 2024<br>Tiniguiban Heights, Puerto Princesa City</p>
+                <p><strong>Roxas National Comprehensive High School</strong><br>2012 - 2018<br>Brgy. 1, Roxas, Palawan</p>
+                <p><strong>Andress Soriano Memorial Elementary School</strong><br>2006 - 2012<br>Brgy. New Barbacan, Roxas, Palawan</p>
+            </div>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
 </html>
